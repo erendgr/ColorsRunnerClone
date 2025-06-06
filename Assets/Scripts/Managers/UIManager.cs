@@ -54,8 +54,8 @@ namespace Managers
             UISignals.Instance.onClosePanel += OnClosePanel;
             UISignals.Instance.onSetLevelText += OnSetLevelText;
             UISignals.Instance.onSetScoreText += OnSetScoreText;
-            // LevelSignals.Instance.onLevelFailed += OnLevelFailed;
-            // LevelSignals.Instance.onLevelSuccessful += OnLevelSuccessful;
+            LevelSignals.Instance.onLevelFailed += OnLevelFailed;
+            LevelSignals.Instance.onLevelSuccessful += OnLevelSuccessful;
             // GunPoolSignals.Instance.onGunPoolExit += text2xController.Show2XText;
             // StackSignals.Instance.onLastCollectableAddedToPlayer += OnLastCollectableAddedToPlayer;
         }
@@ -68,8 +68,8 @@ namespace Managers
             UISignals.Instance.onClosePanel -= OnClosePanel;
             UISignals.Instance.onSetLevelText -= OnSetLevelText;
             UISignals.Instance.onSetScoreText -= OnSetScoreText;
-            // LevelSignals.Instance.onLevelFailed -= OnLevelFailed;
-            // LevelSignals.Instance.onLevelSuccessful -= OnLevelSuccessful;
+            LevelSignals.Instance.onLevelFailed -= OnLevelFailed;
+            LevelSignals.Instance.onLevelSuccessful -= OnLevelSuccessful;
             // GunPoolSignals.Instance.onGunPoolExit -= text2xController.Show2XText;
             // StackSignals.Instance.onLastCollectableAddedToPlayer -= OnLastCollectableAddedToPlayer;
 
@@ -162,7 +162,7 @@ namespace Managers
             if (_isReadyForIdleGame || isOnEditMode)
             {
                 CoreGameSignals.Instance.onChangeGameState?.Invoke();
-                //ScoreSignals.Instance.onSendFinalScore?.Invoke();
+                ScoreSignals.Instance.onSendFinalScore?.Invoke();
             }
         }
 
