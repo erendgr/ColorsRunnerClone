@@ -22,7 +22,7 @@ namespace Managers
 
         #region Private Variables
         private UIPanelController _uiPanelController;
-        private Text2xController text2xController;
+        private Text2xController _text2xController;
         private bool _isReadyForIdleGame = false;
         #endregion
 
@@ -36,7 +36,7 @@ namespace Managers
 
         private void Init()
         {
-            text2xController = GetComponent<Text2xController>();
+            _text2xController = GetComponent<Text2xController>();
         }
 
         #region Event Subscriptions
