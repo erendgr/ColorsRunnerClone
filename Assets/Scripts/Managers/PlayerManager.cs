@@ -86,11 +86,11 @@ namespace Managers
             CoreGameSignals.Instance.onChangeGameState += OnChangeMovementState;
             LevelSignals.Instance.onLevelSuccessful += OnLevelSuccessful;
             LevelSignals.Instance.onLevelFailed += OnLevelFailed;
-            // StackSignals.Instance.onBoostArea += _jumpCommand.Execute;
-            // DronePoolSignals.Instance.onPlayerCollideWithDronePool += movementController.DeactiveForwardMovement;
-            // DronePoolSignals.Instance.onDroneGone += movementController.UnDeactiveForwardMovement;
-            // DronePoolSignals.Instance.onPlayerGotoTruePool += _setPlayerPositionAfterDronePool.Execute;
-            // StackSignals.Instance.onSetPlayerScale += OnSetPlayerScale;
+            StackSignals.Instance.onBoostArea += _jumpCommand.Execute;
+            DronePoolSignals.Instance.onPlayerCollideWithDronePool += movementController.DeactiveForwardMovement;
+            DronePoolSignals.Instance.onDroneGone += movementController.UnDeactiveForwardMovement;
+            DronePoolSignals.Instance.onPlayerGotoTruePool += _setPlayerPositionAfterDronePool.Execute;
+            StackSignals.Instance.onSetPlayerScale += OnSetPlayerScale;
             // IdleSignals.Instance.onIteractionBuild += OnInteractionBuyPoint;
         }
 
@@ -105,11 +105,11 @@ namespace Managers
             CoreGameSignals.Instance.onChangeGameState -= OnChangeMovementState;
             LevelSignals.Instance.onLevelSuccessful -= OnLevelSuccessful;
             LevelSignals.Instance.onLevelFailed -= OnLevelFailed;
-            // StackSignals.Instance.onBoostArea -= _jumpCommand.Execute;
-            // DronePoolSignals.Instance.onPlayerCollideWithDronePool -= movementController.DeactiveForwardMovement;
-            // DronePoolSignals.Instance.onDroneGone -= movementController.UnDeactiveForwardMovement;
-            // DronePoolSignals.Instance.onPlayerGotoTruePool -= _setPlayerPositionAfterDronePool.Execute;
-            // StackSignals.Instance.onSetPlayerScale -= OnSetPlayerScale;
+            StackSignals.Instance.onBoostArea -= _jumpCommand.Execute;
+            DronePoolSignals.Instance.onPlayerCollideWithDronePool -= movementController.DeactiveForwardMovement;
+            DronePoolSignals.Instance.onDroneGone -= movementController.UnDeactiveForwardMovement;
+            DronePoolSignals.Instance.onPlayerGotoTruePool -= _setPlayerPositionAfterDronePool.Execute;
+            StackSignals.Instance.onSetPlayerScale -= OnSetPlayerScale;
             // IdleSignals.Instance.onIteractionBuild -= OnInteractionBuyPoint;
         }
 

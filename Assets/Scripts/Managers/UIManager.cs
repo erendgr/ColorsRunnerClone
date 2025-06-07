@@ -15,7 +15,7 @@ namespace Managers
         [SerializeField] private List<GameObject> panels;
         [SerializeField] private TextMeshProUGUI levelText;
         [SerializeField] private TextMeshPro scoreTMP;
-        [SerializeField] private bool isOnEditMode = false;
+        [SerializeField] private bool isOnEditMode;
         [SerializeField] private TextMeshProUGUI idleScoreText;
 
         #endregion
@@ -23,7 +23,7 @@ namespace Managers
         #region Private Variables
         private UIPanelController _uiPanelController;
         private Text2xController _text2xController;
-        private bool _isReadyForIdleGame = false;
+        private bool _isReadyForIdleGame;
         #endregion
 
         #endregion
@@ -57,7 +57,7 @@ namespace Managers
             LevelSignals.Instance.onLevelFailed += OnLevelFailed;
             LevelSignals.Instance.onLevelSuccessful += OnLevelSuccessful;
             // GunPoolSignals.Instance.onGunPoolExit += text2xController.Show2XText;
-            // StackSignals.Instance.onLastCollectableAddedToPlayer += OnLastCollectableAddedToPlayer;
+            StackSignals.Instance.onLastCollectableAddedToPlayer += OnLastCollectableAddedToPlayer;
         }
 
         private void UnsubscribeEvents()
@@ -71,7 +71,7 @@ namespace Managers
             LevelSignals.Instance.onLevelFailed -= OnLevelFailed;
             LevelSignals.Instance.onLevelSuccessful -= OnLevelSuccessful;
             // GunPoolSignals.Instance.onGunPoolExit -= text2xController.Show2XText;
-            // StackSignals.Instance.onLastCollectableAddedToPlayer -= OnLastCollectableAddedToPlayer;
+            StackSignals.Instance.onLastCollectableAddedToPlayer -= OnLastCollectableAddedToPlayer;
 
         }
 
