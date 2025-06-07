@@ -91,8 +91,8 @@ namespace Managers
             StackSignals.Instance.onInteractionObstacle += _itemRemoveOnStackCommand.Execute;
             StackSignals.Instance.onPlayerGameObject += OnSetPlayer;
             StackSignals.Instance.ColorType += OnGateState;
-            // GunPoolSignals.Instance.onWrongGunPool += _randomRemoveListItemCommand.Execute;
-            // GunPoolSignals.Instance.onGunPoolExit += _duplicateStateItemsCommand.Execute;
+            GunPoolSignals.Instance.onWrongGunPool += _randomRemoveListItemCommand.Execute;
+            GunPoolSignals.Instance.onGunPoolExit += _duplicateStateItemsCommand.Execute;
             DronePoolSignals.Instance.onPlayerCollideWithDronePool += OnPlayerCollideWithDronePool;
             DronePoolSignals.Instance.onCollectableCollideWithDronePool += OnStackToUnstack;
             DronePoolSignals.Instance.onWrongDronePool += OnWrongDronePoolCollectablesDelete;
@@ -110,8 +110,8 @@ namespace Managers
             StackSignals.Instance.onInteractionObstacle -= _itemRemoveOnStackCommand.Execute;
             StackSignals.Instance.onPlayerGameObject -= OnSetPlayer;
             StackSignals.Instance.ColorType -= OnGateState;
-            // GunPoolSignals.Instance.onWrongGunPool -= _randomRemoveListItemCommand.Execute;
-            // GunPoolSignals.Instance.onGunPoolExit -= _duplicateStateItemsCommand.Execute;
+            GunPoolSignals.Instance.onWrongGunPool -= _randomRemoveListItemCommand.Execute;
+            GunPoolSignals.Instance.onGunPoolExit -= _duplicateStateItemsCommand.Execute;
             DronePoolSignals.Instance.onPlayerCollideWithDronePool -= OnPlayerCollideWithDronePool;
             DronePoolSignals.Instance.onCollectableCollideWithDronePool -= OnStackToUnstack;
             DronePoolSignals.Instance.onWrongDronePool -= OnWrongDronePoolCollectablesDelete;

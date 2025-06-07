@@ -91,7 +91,7 @@ namespace Managers
             DronePoolSignals.Instance.onDroneGone += movementController.UnDeactiveForwardMovement;
             DronePoolSignals.Instance.onPlayerGotoTruePool += _setPlayerPositionAfterDronePool.Execute;
             StackSignals.Instance.onSetPlayerScale += OnSetPlayerScale;
-            // IdleSignals.Instance.onIteractionBuild += OnInteractionBuyPoint;
+            IdleSignals.Instance.onInteractionBuild += OnInteractionBuyPoint;
         }
 
         private void UnsubscribeEvents()
@@ -110,7 +110,7 @@ namespace Managers
             DronePoolSignals.Instance.onDroneGone -= movementController.UnDeactiveForwardMovement;
             DronePoolSignals.Instance.onPlayerGotoTruePool -= _setPlayerPositionAfterDronePool.Execute;
             StackSignals.Instance.onSetPlayerScale -= OnSetPlayerScale;
-            // IdleSignals.Instance.onIteractionBuild -= OnInteractionBuyPoint;
+            IdleSignals.Instance.onInteractionBuild -= OnInteractionBuyPoint;
         }
 
         private void OnDisable()

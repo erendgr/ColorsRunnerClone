@@ -56,7 +56,7 @@ namespace Managers
             UISignals.Instance.onSetScoreText += OnSetScoreText;
             LevelSignals.Instance.onLevelFailed += OnLevelFailed;
             LevelSignals.Instance.onLevelSuccessful += OnLevelSuccessful;
-            // GunPoolSignals.Instance.onGunPoolExit += text2xController.Show2XText;
+            GunPoolSignals.Instance.onGunPoolExit += _text2xController.Show2XText;
             StackSignals.Instance.onLastCollectableAddedToPlayer += OnLastCollectableAddedToPlayer;
         }
 
@@ -70,7 +70,7 @@ namespace Managers
             UISignals.Instance.onSetScoreText -= OnSetScoreText;
             LevelSignals.Instance.onLevelFailed -= OnLevelFailed;
             LevelSignals.Instance.onLevelSuccessful -= OnLevelSuccessful;
-            // GunPoolSignals.Instance.onGunPoolExit -= text2xController.Show2XText;
+            GunPoolSignals.Instance.onGunPoolExit -= _text2xController.Show2XText;
             StackSignals.Instance.onLastCollectableAddedToPlayer -= OnLastCollectableAddedToPlayer;
 
         }
