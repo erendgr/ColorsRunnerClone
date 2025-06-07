@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Datas
+namespace Datas.ValueObjects
 {
     [Serializable]
     public class IdleCitizenData

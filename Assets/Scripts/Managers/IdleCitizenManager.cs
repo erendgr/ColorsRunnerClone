@@ -1,6 +1,5 @@
 ﻿using System.Collections.Generic;
 using Controllers.IdleArea;
-using Datas;
 using Datas.UnityObjects;
 using Datas.ValueObjects;
 using DG.Tweening;
