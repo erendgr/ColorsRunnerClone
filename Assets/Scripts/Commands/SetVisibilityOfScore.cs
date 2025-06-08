@@ -12,10 +12,10 @@ namespace Commands
 
         #endregion
 
-        public SetVisibilityOfScore(ref TextMeshPro scoreTMP, ref TextMeshPro spriteTMP, ref GameObject textPlane)
+        public SetVisibilityOfScore(ref TextMeshPro scoreTMP, /*ref TextMeshPro spriteTMP,*/ ref GameObject textPlane)
         {
             _scoreTMP = scoreTMP;
-            _spriteTMP = spriteTMP;
+            // _spriteTMP = spriteTMP;
             _textPlane = textPlane;
         }
 

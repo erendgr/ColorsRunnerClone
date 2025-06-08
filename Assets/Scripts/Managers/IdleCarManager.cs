@@ -55,7 +55,7 @@ namespace Managers
             SetCurrentTarget(_lastTrigger);
         }
 
-        private void SelectRandomDirection(IdleTargetData targetData, Transform trigger)
+        public void SelectRandomDirection(IdleTargetData targetData, Transform trigger)
         {
             _lastData = targetData;
             _newEnum = targetData.axises[Random.Range(0, targetData.axises.Count)];

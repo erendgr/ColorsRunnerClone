@@ -29,22 +29,16 @@ MonoBehaviour:
     referenceMode: 2
     serializationDepthLimit: 64
     assemblyNames:
-    - Assembly-CSharp
     - Assembly-CSharp-firstpass
-    - Boxophobic.PolyverseSkies.Runtime
-    - MoreMountains.NiceVibrations.Haptics
-    - Cinemachine
-    - sc.stylizedwater2.runtime
-    - MoreMountains.NiceVibrations.Demos
-    - Boxophobic.Utils.Scripts
-    - MoreMountains.NiceVibrations
-    - sc.stylizedwater2.editor
-    - Boxophobic.PolyverseSkies.Scripts
-    - Boxophobic.Utils.Editor
+    - Assembly-CSharp
+    - MK.Toon.Editor
     - PPv2URPConverters
-    - MoreMountains.NiceVibrations.Editor
-    - Boxophobic.PolyverseSkies.Editor
-    - Sirenix.OdinInspector.Modules.UnityMathematics
+    - MK.Toon
+    - MK.MeshUtility
+    - MK.MKTextureChannelPacker
+    - MK.Toon.URP.Editor
+    - MK.Toon.URP
+    - MK.RampCreator
     showAdvancedSettings: 0
   addMgrToSceneAutomatically: 0
   autoUpdateReferences: 1

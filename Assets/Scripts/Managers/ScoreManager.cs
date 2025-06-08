@@ -13,7 +13,7 @@ namespace Managers
         #region Serialized Variables
 
         [SerializeField] private GameObject stackGO;
-        [SerializeField] private TextMeshPro scoreTMP, spriteTMP;
+        [SerializeField] private TextMeshPro /*spriteTMP,*/ scoreTMP;
         [SerializeField] private GameObject textPlane;
 
         #endregion
@@ -26,7 +26,7 @@ namespace Managers
         private SetScoreCommand _setScoreCommand;
         private SetVisibilityOfScore _setVisibilityOfScore;
         private GameObject _parentGO;
-        private bool _isActive = false;
+        private bool _isActive;
         private int _savedScore;
 
         #endregion
@@ -42,7 +42,7 @@ namespace Managers
         private void Init()
         {
             _setScoreCommand = new SetScoreCommand(ref _score);
-            _setVisibilityOfScore = new SetVisibilityOfScore(ref scoreTMP, ref spriteTMP, ref textPlane);
+            _setVisibilityOfScore = new SetVisibilityOfScore(ref scoreTMP, /*ref spriteTMP,*/ ref textPlane);
         }
         
         #region Event Subscriptions
