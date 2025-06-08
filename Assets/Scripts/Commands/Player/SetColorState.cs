@@ -3,7 +3,7 @@ using Enums;
 using Managers;
 using UnityEngine;
 
-namespace Commands
+namespace Commands.Player
 {
     public class SetColorState
     {
