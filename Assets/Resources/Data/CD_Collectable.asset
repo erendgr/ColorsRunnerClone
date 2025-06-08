@@ -9,7 +9,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0fcccfaa04384663b88768213a355b79, type: 3}
-  m_Name: CD_Level
+  m_Script: {fileID: 11500000, guid: ce4823facf734232b2f08c7c604e4965, type: 3}
+  m_Name: CD_Collectable
   m_EditorClassIdentifier: 
-  Levels: 0000000000000000
+  Data:
+    CollectablesMoveToDronePoolTriggerTime: 1
+    CollectablesMoveToDronePoolTime: 1

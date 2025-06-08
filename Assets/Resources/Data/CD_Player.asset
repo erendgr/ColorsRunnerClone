@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2e12483e8d5343ce929dc909066e9c15, type: 3}
+  m_Name: CD_Player
+  m_EditorClassIdentifier: 
+  Data:
+    MovementData:
+      ForwardSpeed: 0
+      SidewaysSpeed: 0
+      JumpDistance: 0
+      JumpDuration: 0
+      IdleRotateSpeed: 0
+      RotateBorder: 0
+      CrouchSpeed: 0
+      RunSpeed: 0
