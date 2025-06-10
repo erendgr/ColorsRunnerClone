@@ -25,11 +25,15 @@ namespace Commands.Stack
 
         public void Execute(GameObject collectableGameObject)
         {
+            if (!_collectableStack.Contains(collectableGameObject)) return;
+
             int index = _collectableStack.IndexOf(collectableGameObject);
             collectableGameObject.transform.SetParent(_levelHolder.transform.GetChild(0));
             collectableGameObject.SetActive(false);
+            
             _collectableStack.RemoveAt(index);
             _collectableStack.TrimExcess();
+            
             if (DronePoolSignals.Instance.onGetStackCount() <= 0)
             {
                 LevelSignals.Instance.onLevelFailed?.Invoke();
