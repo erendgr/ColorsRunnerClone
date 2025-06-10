@@ -1,6 +1,6 @@
-﻿using Unity.Cinemachine;
-using Enums;
+﻿using Enums;
 using Signals;
+using Unity.Cinemachine;
 using UnityEngine;
 
 namespace Managers
@@ -10,8 +10,8 @@ namespace Managers
         #region Self Variables
 
         #region Public Variables
-
-        private CameraStates CameraStateController
+        
+        public CameraStates CameraStateController
         {
             get => _cameraStateValue;
             set
@@ -20,23 +20,22 @@ namespace Managers
                 SetCameraStates();
             }
         }
-
+        
         #endregion
-
         #region Serialized Variables
-
-        [SerializeField] private CinemachineVirtualCamera runnerCamera;
-        [SerializeField] private CinemachineVirtualCamera idleStartCamera;
-        [SerializeField] private CinemachineVirtualCamera idleCamera;
+        
+        [SerializeField]private CinemachineVirtualCamera runnerCamera;
+        [SerializeField]private CinemachineVirtualCamera idleStartCamera;
+        [SerializeField]private CinemachineVirtualCamera idleCamera;
 
         #endregion
 
         #region Private Variables
-
+        
         private Vector3 _initialPosition;
         private CameraStates _cameraStateValue = CameraStates.InitializeCam;
         private Animator _camAnimator;
-
+        
         #endregion
 
         #endregion
@@ -54,9 +53,8 @@ namespace Managers
             idleCamera = transform.GetChild(3).GetComponent<CinemachineVirtualCamera>();
             _camAnimator = GetComponent<Animator>();
         }
-
+        
         #region Event Subscriptions
-
         private void OnEnable()
         {
             SubscribeEvents();
@@ -69,6 +67,7 @@ namespace Managers
             CoreGameSignals.Instance.onChangeGameState += OnChangeGameStateToIdle;
             LevelSignals.Instance.onNextLevel += OnNextLevel;
             LevelSignals.Instance.onLevelSuccessful += OnLevelSuccessful;
+
         }
 
         private void UnsubscribeEvents()
@@ -78,6 +77,7 @@ namespace Managers
             CoreGameSignals.Instance.onChangeGameState -= OnChangeGameStateToIdle;
             LevelSignals.Instance.onNextLevel -= OnNextLevel;
             LevelSignals.Instance.onLevelSuccessful -= OnLevelSuccessful;
+
         }
 
         private void OnDisable()
@@ -86,7 +86,7 @@ namespace Managers
         }
 
         #endregion
-
+        
         private void SetCameraStates()
         {
             if (CameraStateController == CameraStates.InitializeCam)
@@ -106,7 +106,7 @@ namespace Managers
                 _camAnimator.Play(CameraStateController.ToString());
             }
         }
-
+        
         private void GetInitialPosition()
         {
             _initialPosition = runnerCamera.transform.localPosition;
@@ -119,33 +119,32 @@ namespace Managers
 
         private void OnSetCameraTarget()
         {
-            var playerManager = FindAnyObjectByType<PlayerManager>().transform;
+            var playerManager = FindObjectOfType<PlayerManager>().transform;
             runnerCamera.Follow = playerManager;
             idleCamera.Follow = playerManager;
             idleStartCamera.Follow = playerManager;
             CameraStateController = CameraStates.RunnerCam;
         }
-
+        
         private void OnNextLevel()
         {
             CameraStateController = CameraStates.InitializeCam;
         }
-
         private void OnChangeGameStateToIdle()
         {
             CameraStateController = CameraStates.IdleCam;
         }
-
         private void OnLevelSuccessful()
         {
             CameraStateController = CameraStates.IdleStartCam;
         }
 
+ 
 
         private void OnReset()
         {
             CameraStateController = CameraStates.InitializeCam;
-            runnerCamera.Follow = null;
+            runnerCamera.Follow = null; //referanceı state driven yap
             runnerCamera.LookAt = null;
             runnerCamera = transform.GetChild(1).GetComponent<CinemachineVirtualCamera>();
             OnMoveToInitialPosition();
