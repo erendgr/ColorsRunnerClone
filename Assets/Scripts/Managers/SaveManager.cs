@@ -92,6 +92,7 @@ namespace Managers
                     SideBuildingState = _sideBuildingState
                 }
             );
+            Debug.Log(_sideBuildingState.Count);
         }
 
         #endregion

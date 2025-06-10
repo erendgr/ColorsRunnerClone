@@ -12,7 +12,7 @@ namespace Controllers.IdleArea
 
         #region SerializeField Variables
 
-        [SerializeField] private GameObject collectEffect;
+        //[SerializeField] private GameObject collectEffect;
 
         #endregion
 
@@ -45,7 +45,7 @@ namespace Controllers.IdleArea
 
             if (other.CompareTag("Player"))
             {
-                Destroy(Instantiate(collectEffect, transform.position, transform.rotation), 1f);
+                //Destroy(Instantiate(collectEffect, transform.position, transform.rotation), 1f);
                 StopAllCoroutines();
                 _manager.CollideWithPlayer();
             }

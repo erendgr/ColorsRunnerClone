@@ -15,15 +15,22 @@ MonoBehaviour:
   version: 4
 --- !u!21 &2100000
 Material:
-  serializedVersion: 6
+  serializedVersion: 8
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Base_Glass
   m_Shader: {fileID: 4800000, guid: 22c8483a0088cff4ea29f92544b8304b, type: 3}
-  m_ShaderKeywords: _ALPHAPREMULTIPLY_ON _MK_ALBEDO_MAP _MK_BLEND_PREMULTIPLY _MK_COLOR_GRADING_ALBEDO
-    _MK_OUTLINE_HULL_CLIP
+  m_Parent: {fileID: 0}
+  m_ModifiedSerializedProperties: 0
+  m_ValidKeywords:
+  - _MK_ALBEDO_MAP
+  - _MK_BLEND_PREMULTIPLY
+  - _MK_COLOR_GRADING_ALBEDO
+  m_InvalidKeywords:
+  - _ALPHAPREMULTIPLY_ON
+  - _MK_OUTLINE_HULL_CLIP
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
@@ -32,6 +39,7 @@ Material:
     IGNOREPROJECTOR: False
     RenderType: Opaque
   disabledShaderPasses: []
+  m_LockedProperties: 
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
@@ -79,6 +87,10 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - _NoiseMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _OcclusionMap:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
@@ -111,14 +123,18 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    m_Ints: []
     m_Floats:
     - _AdvancedTab: 1
+    - _AlbedoMapIntensity: 1
     - _AlphaClip: 0
     - _AlphaClipping: 0
     - _AlphaCutoff: 0.5
     - _Blend: 1
     - _BlendDst: 0
+    - _BlendDstAlpha: 0
     - _BlendSrc: 1
+    - _BlendSrcAlpha: 1
     - _Brightness: 1
     - _BumpScale: 1
     - _ClearCoatMask: 0
@@ -188,3 +204,4 @@ Material:
     - _SpecColor: {r: 0.19999996, g: 0.19999996, b: 0.19999996, a: 1}
     - _VertexAnimationFrequency: {r: 2.5, g: 2.5, b: 2.5, a: 1}
   m_BuildTextureStacks: []
+  m_AllowLocking: 1

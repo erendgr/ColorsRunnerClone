@@ -94,7 +94,6 @@ namespace Managers
             tmp.gameObject.SetActive(false);
         }
 
-
         #region Event Subscription
 
         private void OnEnable()
@@ -118,7 +117,6 @@ namespace Managers
         }
 
         #endregion
-
 
         private void Start()
         {

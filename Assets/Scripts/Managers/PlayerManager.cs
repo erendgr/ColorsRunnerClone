@@ -211,7 +211,7 @@ namespace Managers
 
         private void SetStackPosition()
         {
-            //StackSignals.Instance.onPlayerGameObject?.Invoke(gameObject);
+            StackSignals.Instance.onPlayerGameObject?.Invoke(gameObject);
         }
 
         private void SetAnim(CollectableAnimStates animState)

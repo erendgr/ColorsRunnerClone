@@ -17,12 +17,12 @@ namespace Managers
 
         private int _idleLevel;
         private LevelData _levelsData;
-        private List<GameObject> _mainAreas = new List<GameObject>();
-        private List<List<GameObject>> _sideAreas = new List<List<GameObject>>();
-        private List<int> _mainCurrentScore = new List<int>();
-        private List<int> _sideCurrentScore = new List<int>();
-        private List<BuildingState> _mainBuildingState = new List<BuildingState>();
-        private List<BuildingState> _sideBuildingState = new List<BuildingState>();
+        private List<GameObject> _mainAreas = new();
+        private List<List<GameObject>> _sideAreas = new();
+        private List<int> _mainCurrentScore = new();
+        private List<int> _sideCurrentScore = new();
+        private List<BuildingState> _mainBuildingState = new();
+        private List<BuildingState> _sideBuildingState = new();
         private SaveIdleDataParams _saveIdleDataParams;
         private int _sideCache;
         private int _completeSides;
@@ -80,7 +80,7 @@ namespace Managers
         private void Init()
         {
             SaveSignals.Instance.onLoadIdle?.Invoke();
-            EmptyListCheck();
+            //EmptyListCheck();
         }
         
         private void LoadIdleDatas(SaveIdleDataParams saveIdleDataParams)
@@ -120,10 +120,17 @@ namespace Managers
         }
 
         private void OnSideSetReferences(List<GameObject> sideGameObjects, List<int> buildingPrices)
-        {
+        { 
             _sideAreas.Add(sideGameObjects);
+            foreach (var t in sideGameObjects)
+            {
+                _sideCurrentScore.Add(0);
+                _sideBuildingState.Add(BuildingState.Uncompleted);
+                Debug.Log("aaa");
+            }
             for (int i = 0; i < sideGameObjects.Count; i++)
             {
+                //Debug.Log(_sideCache + "-" + buildingPrices.Count + "-" +_sideCurrentScore.Count + "-" +_sideBuildingState.Count);
                 sideGameObjects[i].GetComponent<IdleAreaManager>().SetBuildRef(_sideCache, false,
                     buildingPrices[i], _sideCurrentScore[_sideCache], _sideBuildingState[_sideCache], this);
                 _sideCache++;

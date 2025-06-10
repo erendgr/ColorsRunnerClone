@@ -113,7 +113,7 @@ namespace Managers
         private void CreateLevelBuildings(LevelBuildingData levelBuildingData)
         {
             CreateSideBuilding(levelBuildingData);
-            CreateMainBuilding(levelBuildingData);
+            //CreateMainBuilding(levelBuildingData);
         }
 
         private void CreateMainBuilding(LevelBuildingData levelBuildingData)
@@ -121,11 +121,11 @@ namespace Managers
             var mainBuild = levelBuildingData.mainBuildingData.Building;
             var buildingPrice = levelBuildingData.mainBuildingData.MainBuildingScore;
             var position = idleLevelHolder.position;
-            GameObject obj = Instantiate(mainBuild, position + levelBuildingData.mainBuildingData.InstantitatePos,
+            GameObject obj = Instantiate(mainBuild, position + levelBuildingData.mainBuildingData.InstantiatePos,
                 mainBuild.transform.rotation, idleLevelHolder);
             IdleSignals.Instance.onMainSideObjects?.Invoke(obj, buildingPrice);
         }
-
+        
         private void CreateSideBuilding(LevelBuildingData levelBuildingData)
         {
             List<GameObject> sideCache = new List<GameObject>();
@@ -140,7 +140,6 @@ namespace Managers
                 sideCache.Add(obj);
                 sidePriceCache.Add(buildingPrice);
             }
-
             IdleSignals.Instance.onSideObjects?.Invoke(sideCache, sidePriceCache);
         }
 
