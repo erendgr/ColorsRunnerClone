@@ -14,11 +14,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Data:
     MovementData:
-      ForwardSpeed: 0
-      SidewaysSpeed: 0
-      JumpDistance: 0
-      JumpDuration: 0
-      IdleRotateSpeed: 0
-      RotateBorder: 0
-      CrouchSpeed: 0
-      RunSpeed: 0
+      ForwardSpeed: 15
+      SidewaysSpeed: 2
+      JumpDistance: 2
+      JumpDuration: 0.25
+      IdleRotateSpeed: 300
+      RotateBorder: 15
+      CrouchSpeed: 6
+      RunSpeed: 15
