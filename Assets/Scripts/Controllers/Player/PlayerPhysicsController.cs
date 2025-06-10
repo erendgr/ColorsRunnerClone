@@ -35,7 +35,7 @@ namespace Controllers.Player
         {
             if (other.CompareTag(_dronePool))
             {
-                //DronePoolSignals.Instance.onPlayerCollideWithDronePool?.Invoke(other.transform);
+                DronePoolSignals.Instance.onPlayerCollideWithDronePool?.Invoke(other.transform);
                 ScoreSignals.Instance.onVisibleScore?.Invoke(false);
                 return;
             }
@@ -49,14 +49,14 @@ namespace Controllers.Player
 
             if (other.CompareTag(_dronePoolReset))
             {
-                //DronePoolSignals.Instance.onDronePoolExit?.Invoke();
+                DronePoolSignals.Instance.onDronePoolExit?.Invoke();
                 return;
             }
 
             if (other.CompareTag(_gunPoolExit))
             {
                 manager.Data.MovementData.ForwardSpeed = manager.Data.MovementData.RunSpeed;
-                //GunPoolSignals.Instance.onGunPoolExit?.Invoke();
+                GunPoolSignals.Instance.onGunPoolExit?.Invoke();
                 return;
             }
 
@@ -84,7 +84,7 @@ namespace Controllers.Player
             {
                 ScoreSignals.Instance.onSetScore?.Invoke(1);
                 other.transform.parent.gameObject.SetActive(false);
-                //IdleSignals.Instance.onIdleCollectableValue(-1);
+                IdleSignals.Instance.onIdleCollectableValue(-1);
             }
         }
     }
