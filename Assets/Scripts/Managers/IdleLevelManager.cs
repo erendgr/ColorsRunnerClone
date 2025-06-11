@@ -113,7 +113,7 @@ namespace Managers
         private void CreateLevelBuildings(LevelBuildingData levelBuildingData)
         {
             CreateSideBuilding(levelBuildingData);
-            //CreateMainBuilding(levelBuildingData);
+            CreateMainBuilding(levelBuildingData);
         }
 
         private void CreateMainBuilding(LevelBuildingData levelBuildingData)

@@ -114,23 +114,33 @@ namespace Managers
 
         private void OnMainSideSetReferences(GameObject mainObGameObject, int buildingPrice)
         {
+            if (_mainBuildingState.Count < 1)
+            {
+                for (int i = 0; i < 8; i++)
+                {
+                    _mainCurrentScore.Add(0);
+                    _mainBuildingState.Add(BuildingState.Uncompleted);
+                }
+            }
             _mainAreas.Add(mainObGameObject);
             mainObGameObject.GetComponent<IdleAreaManager>().SetBuildRef(_mainAreas.Count - 1, true, buildingPrice,
                 _mainCurrentScore[_mainAreas.Count - 1], _mainBuildingState[_mainAreas.Count - 1], this);
         }
 
         private void OnSideSetReferences(List<GameObject> sideGameObjects, List<int> buildingPrices)
-        { 
-            _sideAreas.Add(sideGameObjects);
-            foreach (var t in sideGameObjects)
+        {
+            if (_sideBuildingState.Count < 1)
             {
-                _sideCurrentScore.Add(0);
-                _sideBuildingState.Add(BuildingState.Uncompleted);
-                Debug.Log("aaa");
+                for (int i = 0; i < 8; i++)
+                {
+                    _sideCurrentScore.Add(0);
+                    _sideBuildingState.Add(BuildingState.Uncompleted);
+                }
             }
+            _sideAreas.Add(sideGameObjects);
+            
             for (int i = 0; i < sideGameObjects.Count; i++)
             {
-                //Debug.Log(_sideCache + "-" + buildingPrices.Count + "-" +_sideCurrentScore.Count + "-" +_sideBuildingState.Count);
                 sideGameObjects[i].GetComponent<IdleAreaManager>().SetBuildRef(_sideCache, false,
                     buildingPrices[i], _sideCurrentScore[_sideCache], _sideBuildingState[_sideCache], this);
                 _sideCache++;

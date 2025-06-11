@@ -86,7 +86,6 @@ namespace Managers
 
         #endregion
         
-
         private void Update()
         {
             SetScoreManagerRotation();
@@ -115,6 +114,7 @@ namespace Managers
         
         private void OnSetLead(GameObject gO)
         {
+            Debug.Log(gO.name);
             _parentGO = gO;
         }
         
