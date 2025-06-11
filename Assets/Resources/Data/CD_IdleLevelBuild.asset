@@ -21,79 +21,79 @@ MonoBehaviour:
           BuildingState: 1
           Building: {fileID: 7450612388801243896, guid: 14555f68db5024d42aae3bae949b9919, type: 3}
           MainBuildingScore: 100
-          InstantiatePos: {x: -4.65, y: -0.1, z: -8.97}
+          InstantiatePos: {x: -4.65, y: 0.5, z: -8.97}
         sideBuildindData:
         - BuildingState: 1
           Building: {fileID: 880830396564600345, guid: 342833e9a37f03747bd861d9c3d615c7, type: 3}
           SideBuildingScore: 10
-          InstantitatePos: {x: -6.2, y: 0, z: -10}
+          InstantitatePos: {x: -6.23, y: -0.16, z: -10.68}
       - mainBuildingData:
           BuildingState: 1
           Building: {fileID: 8171898521963330353, guid: c11e9246140268444bbe0cc13939b06f, type: 3}
           MainBuildingScore: 10
-          InstantiatePos: {x: 11.69, y: 0.43, z: -11.06}
+          InstantiatePos: {x: 11.69, y: 0.5, z: -11.06}
         sideBuildindData:
         - BuildingState: 1
           Building: {fileID: 8790398620387645733, guid: 38bdb192780c2004bac11998f7ee8b32, type: 3}
           SideBuildingScore: 10
-          InstantitatePos: {x: 11.7, y: -0.018, z: -10}
+          InstantitatePos: {x: 11.71, y: -0.16, z: -10.67}
       - mainBuildingData:
           BuildingState: 1
           Building: {fileID: 284068124121698608, guid: 64bccded488ea4e408fe06645377ec7b, type: 3}
           MainBuildingScore: 10
-          InstantiatePos: {x: -7.13, y: 0.35, z: 1.6}
+          InstantiatePos: {x: -7.13, y: 0.5, z: 1.6}
         sideBuildindData:
         - BuildingState: 1
           Building: {fileID: 6009187552055752756, guid: f1931c0c5f011fb43a79f6979de35912, type: 3}
           SideBuildingScore: 10
-          InstantitatePos: {x: 41.69, y: -0.093, z: -18.127}
+          InstantitatePos: {x: 41.69, y: -0.16, z: -18.12}
       - mainBuildingData:
           BuildingState: 1
           Building: {fileID: 1405919638657786934, guid: 3adcea69613717a4082d04694458010f, type: 3}
           MainBuildingScore: 10
-          InstantiatePos: {x: 12.45, y: 0.3, z: 4.61}
+          InstantiatePos: {x: 12.45, y: 0.5, z: 4.61}
         sideBuildindData:
         - BuildingState: 1
           Building: {fileID: 2460996786094805866, guid: 96263397fbeae2845bae0b4e85968f53, type: 3}
           SideBuildingScore: 10
-          InstantitatePos: {x: 11.8787, y: -0.04, z: 4.345}
+          InstantitatePos: {x: 11.87, y: -0.16, z: 4.34}
       - mainBuildingData:
           BuildingState: 1
           Building: {fileID: 1464779884844237763, guid: f9c8b6ab0f600bb4cac6df4f21bf9a33, type: 3}
           MainBuildingScore: 10
-          InstantiatePos: {x: 11.8, y: 0.45, z: 19.34}
+          InstantiatePos: {x: 11.8, y: 0.5, z: 19.34}
         sideBuildindData:
         - BuildingState: 1
           Building: {fileID: 1280349392460340484, guid: 20a42338f596c364a9c5e4887b44cde3, type: 3}
           SideBuildingScore: 10
-          InstantitatePos: {x: 11.93, y: 0.05, z: 19.288}
+          InstantitatePos: {x: 11.93, y: -0.16, z: 19.28}
       - mainBuildingData:
           BuildingState: 1
           Building: {fileID: 6806712846953036353, guid: 13c0e61fe9f1ab94b9b2b5e24c1e1db4, type: 3}
           MainBuildingScore: 10
-          InstantiatePos: {x: -4.8, y: 0.44, z: 19.12}
+          InstantiatePos: {x: -4.8, y: 0.5, z: 19.12}
         sideBuildindData:
         - BuildingState: 1
           Building: {fileID: 2460996786094805866, guid: 96263397fbeae2845bae0b4e85968f53, type: 3}
           SideBuildingScore: 10
-          InstantitatePos: {x: -6.03, y: -0.04, z: 19.314}
+          InstantitatePos: {x: -6, y: -0.16, z: 19.31}
       - mainBuildingData:
           BuildingState: 1
           Building: {fileID: 2180835961901856746, guid: 7ce24445ded7ee24c834566b1367ef6a, type: 3}
           MainBuildingScore: 10
-          InstantiatePos: {x: -6.29, y: 0.3, z: 33.97}
+          InstantiatePos: {x: -6.29, y: 0.5, z: 33.97}
         sideBuildindData:
         - BuildingState: 1
           Building: {fileID: 880830396564600345, guid: 342833e9a37f03747bd861d9c3d615c7, type: 3}
           SideBuildingScore: 10
-          InstantitatePos: {x: -6.102, y: -0.093, z: 34.272}
+          InstantitatePos: {x: -6.1, y: -0.16, z: 34.27}
       - mainBuildingData:
           BuildingState: 1
           Building: {fileID: 8988482732995040015, guid: 260ca9f6f1a5d264580b7b9166ecccd5, type: 3}
           MainBuildingScore: 10
-          InstantiatePos: {x: 12.81, y: 0.3, z: 32.72}
+          InstantiatePos: {x: 12.81, y: 0.5, z: 32.72}
         sideBuildindData:
         - BuildingState: 1
           Building: {fileID: 8790398620387645733, guid: 38bdb192780c2004bac11998f7ee8b32, type: 3}
           SideBuildingScore: 10
-          InstantitatePos: {x: 11.93, y: -0.093, z: 34.288}
+          InstantitatePos: {x: 11.93, y: -0.16, z: 34.28}
